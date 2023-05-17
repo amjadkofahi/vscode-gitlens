@@ -4508,12 +4508,14 @@
 			{
 				"command": "gitlens.plus.loginOrSignUp",
 				"title": "Sign In to GitLens+...",
-				"category": "GitLens+"
+				"category": "GitLens+",
+				"icon": "$(sign-in)"
 			},
 			{
 				"command": "gitlens.plus.logout",
 				"title": "Sign out of GitLens+",
-				"category": "GitLens+"
+				"category": "GitLens+",
+				"icon": "$(sign-out)"
 			},
 			{
 				"command": "gitlens.plus.startPreviewTrial",
@@ -4523,7 +4525,8 @@
 			{
 				"command": "gitlens.plus.manage",
 				"title": "Manage Your GitLens+ Account...",
-				"category": "GitLens+"
+				"category": "GitLens+",
+				"icon": "$(account)"
 			},
 			{
 				"command": "gitlens.plus.purchase",
@@ -10849,8 +10852,8 @@
 			],
 			"view/item/context": [
 				{
-					"command": "gitlens.views.workspaces.open",
-					"when": "viewItem =~ /gitlens:workspace/",
+					"command": "gitlens.plus.loginOrSignUp",
+					"when": "viewItem == gitlens:message:signin",
 					"group": "inline@1"
 				},
 				{
