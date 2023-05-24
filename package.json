@@ -6856,6 +6856,13 @@
 				"icon": "$(refresh)"
 			},
 			{
+				"command": "gitlens.views.workspaces.convert",
+				"title": "Convert to GitKraken Workspace...",
+				"category": "GitLens",
+				"icon": "$(cloud-upload)",
+				"enablement": "!operationInProgress"
+			},
+			{
 				"command": "gitlens.views.workspaces.create",
 				"title": "Create Workspace...",
 				"category": "GitLens",
@@ -9313,6 +9320,10 @@
 					"when": "false"
 				},
 				{
+					"command": "gitlens.views.workspaces.convert",
+					"when": "false"
+				},
+				{
 					"command": "gitlens.views.workspaces.create",
 					"when": "false"
 				},
@@ -10893,6 +10904,11 @@
 				{
 					"command": "gitlens.plus.loginOrSignUp",
 					"when": "viewItem == gitlens:message:signin",
+					"group": "inline@1"
+				},
+				{
+					"command": "gitlens.views.workspaces.convert",
+					"when": "viewItem =~  /gitlens:repositories\\b(?=.*?\\b\\+workspaces\\b)/",
 					"group": "inline@1"
 				},
 				{
